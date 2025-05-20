@@ -1,0 +1,9 @@
+import Button from "./Button";
+
+export default function UploadButton() {
+    return (
+        <Button onClick={() => alert('Uploading')}>
+            Upload image
+        </Button>
+    );
+}

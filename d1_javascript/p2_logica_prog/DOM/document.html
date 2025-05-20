@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        alert(document.characterSet);
+
+        const URI = document.documentURI;
+
+
+        // ***DOCUMENT.ACTIVEELEMENT***
+        function init(){    
+            function onMouseUp(e){
+                console.log(e);
+
+                let outPutElement = document.getElementById('output-element');
+                let outPutText = document.getElementById('output-text');
+
+                let selectTextArea = document.activeElement;
+
+                let selection = selectTextArea.value.substring(
+                    selectTextArea.selectionStart,
+                    selectTextArea.selectionEnd);
+
+                outPutElement.innerHTML += selectTextArea.id;
+                outPutText.innerHTML += selection;
+            }
+
+            document.getElementById("ta-example-one").addEventListener("mouseup", onMouseUp, false);
+
+            document.getElementById("ta-example-two").addEventListener("mouseup", onMouseUp, false);
+        }
+
+
+        // *** DOCUMENT.FORMS ***
+        const loginForms = document.forms.login;
+        loginForms.elements.email.placeholder += "diogoeng19@gmail.com";
+        loginForms.elements.password.placeholder = "password";
+
+
+        // *** DOCUMENT.READSTATE ***
+        const verifica = document.getElementsByClassName(".verifica");
+
+        switch (document.readyState){
+            case "loading":
+                let p = document.createElement('p');
+                p.textContent = "carregando.";
+                document.body.appendChild(p);
+            case "interactive":
+                let p1 = document.createElement('p');
+                p1.textContent = "finalizando.";
+                document.body.appendChild(p1);
+            case "complete":
+                let p2 = document.createElement('p');
+                p2.textContent = "documento carregado.";
+                document.body.appendChild(p2);
+            
+        }
+
+
+        // *** DOCUMENT.CREATEATTRIBUTE ***
+        const att = document.createAttribute("class");
+        att.value = "democlass";
+
+        const h1 = document.getElementsByTagName("div")[0];
+        h1.setAttributeNode(att);
+
+
+        // *** DOCUMENT.CREATEDOCUMENTFRAGMENT ***
+        const element = document.getElementsByClassName('teste')[0];
+        const fragment = document.createDocumentFragment();
+
+        const browser = ['chrome', 'firefox', 'opera', 'safari'];
+
+        browser.forEach((valoresBrowser) => {
+            const li = document.createElement('li');
+
+            li.textContent = valoresBrowser;
+
+            fragment.appendChild(li);
+        });
+
+        element.appendChild(fragment);
+
+
+        // *** DOCUMENT.CREATEELEMENT ***
+        function adcElement(){
+            let divNova = document.createElement('div');
+
+            let conteudo = document.createTextNode("Olá, comprimentos");
+
+            divNova.appendChild(conteudo);
+
+            let divAtual = document.getElementsByClassName("teste")[0];
+            document.body.insertBefore(divNova, divAtual);
+        }
+
+        adcElement();
+
+
+        // *** DOCUMENT.GETELEMENTSBYTAGNAME ***
+        function getAllParaElems(){
+            let allPass = document.getElementsByTagName('p');
+            let num = allPass.length;
+
+            alert(`there are ${num} paragraph in this document`);
+        }
+
+        function div1ParaElement(){
+            let div1 = document.getElementById('teste2');
+            let div1Paras = div1.getElementsByTagName('p');
+            let num = div1Paras.length;
+
+            alert(`there are ${num} paragraph in #div1`);
+        }
+
+        getAllParaElems();
+        div1ParaElement();
+
+
+        // ***DOCUMENT.QUERYSELECTOR ***
+        let idTeste = document.querySelector('#teste');
+        let pTeste = document.createElement('p');
+
+        idTeste.appendChild(pTeste);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

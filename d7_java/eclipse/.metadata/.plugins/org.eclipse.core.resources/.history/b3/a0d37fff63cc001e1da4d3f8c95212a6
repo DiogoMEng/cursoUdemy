@@ -1,0 +1,31 @@
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+//		### BITWISE ###
+		
+//		int n1 = 89;
+//		int n2 = 60;
+//		
+//		System.out.println(n1 & n2);
+//		System.out.println(n1 | n2);
+//		System.out.println(n1 ^ n2);
+		
+//		### FUNÇÕES INTERESSANTES PARA STRINGS ###
+		
+		String original = "abc deG hiJ klM    ";
+		
+		String s01 = original.toLowerCase(); // retorna os valores em minúsculo.
+		String s02 = original.toUpperCase(); // retorna os valores em maiúsculos.
+		String s03 = original.trim(); // elimina todos os espaços nos cantos das strings.
+		
+		System.out.println("Original: -" + original + "-");
+		System.out.println("ToLowerCase: -" + s01 + "-");
+		System.out.println("ToUpperCase: -" + s02 + "-");
+		System.out.println("Trim: -" + s03 + "-");
+	}
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Fábrica</title>
+</head>
+<body>
+    
+    <div>
+        <p class="paragraph-test">
+
+        </p>
+    </div>
+
+    <script>
+
+        // function test(text, color, background){
+
+        //     function el(){
+
+        //         const paragraph = document.getElementsByTagName('p')[0];
+        //         paragraph.textContent += text;
+        //         paragraph.style.color = color;
+        //         paragraph.style.backgroundColor = background;
+
+        //         return paragraph;
+
+        //     }
+
+        //     return {
+
+        //         el,
+        //         text
+
+        //     }
+
+        // }
+
+        function createNewParagraph(text, color, background){
+
+            function element(){
+
+                const paragraph = document.querySelector("p");
+                paragraph.textContent += text;
+                paragraph.style.color = color;
+                paragraph.style.backgroundColor = background;
+
+                return paragraph;
+
+            }
+
+            return Object.freeze({
+            
+                element,
+                text
+
+            });
+
+        }
+
+        let test = createNewParagraph("text new", "#000", "#fff");
+
+        console.log(test);
+
+        // let teste = test("Diogo testando", "red", "black");
+
+
+    </script>
+
+</body>
+</html>

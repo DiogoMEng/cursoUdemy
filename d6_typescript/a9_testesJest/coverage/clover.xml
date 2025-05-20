@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1705943277770" clover="3.2.0">
+  <project timestamp="1705943277770" name="All files">
+    <metrics statements="49" coveredstatements="40" conditionals="1" coveredconditionals="1" methods="24" coveredmethods="14" elements="74" coveredelements="55" complexity="0" loc="49" ncloc="49" packages="2" files="7" classes="7"/>
+    <package name="entities">
+      <metrics statements="45" coveredstatements="36" conditionals="1" coveredconditionals="1" methods="22" coveredmethods="12"/>
+      <file name="Customer.ts" path="C:\filesDiogo\CURSOS_EXTRACURRICULAR\Typescript\a9_testesJest\src\entities\Customer.ts">
+        <metrics statements="11" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+      </file>
+      <file name="Discount.ts" path="C:\filesDiogo\CURSOS_EXTRACURRICULAR\Typescript\a9_testesJest\src\entities\Discount.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="Order.ts" path="C:\filesDiogo\CURSOS_EXTRACURRICULAR\Typescript\a9_testesJest\src\entities\Order.ts">
+        <metrics statements="15" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+      <file name="Product.ts" path="C:\filesDiogo\CURSOS_EXTRACURRICULAR\Typescript\a9_testesJest\src\entities\Product.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="Shopping_cart.ts" path="C:\filesDiogo\CURSOS_EXTRACURRICULAR\Typescript\a9_testesJest\src\entities\Shopping_cart.ts">
+        <metrics statements="10" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="2"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Messages.ts" path="C:\filesDiogo\CURSOS_EXTRACURRICULAR\Typescript\a9_testesJest\src\services\Messages.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+      <file name="Persistency.ts" path="C:\filesDiogo\CURSOS_EXTRACURRICULAR\Typescript\a9_testesJest\src\services\Persistency.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

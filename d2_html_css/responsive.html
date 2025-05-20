@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 420px){
+            div {
+                display: grid;
+                flex-direction: column;
+                max-width: 50%;
+            }
+
+            div img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Responsive</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint enim, harum pariatur doloremque laboriosam praesentium! Nam eaque ipsam aperiam incidunt corrupti tempore numquam accusamus. Possimus assumenda rerum architecto repudiandae a.
+        </p>
+        <img src="./img/D.png" alt="logo">
+        <img src="./img/D.png" alt="logo">
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container { /* declaração para acessar um id */
+            width: 100%;
+            overflow: auto;
+        }
+
+        /* .container div {
+            width: 30%;
+            float: left;
+            display: inline-block;
+        } */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="grid-container">
+            <div style="background-color: red; padding: 10px; font-weight: bold;">
+                <html>DIV 1 COM COR VERMELHA</html>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laboriosam recusandae sint hic quas in, minima maxime sunt ut magni dolorum, dolore mollitia praesentium. Maiores odit perferendis esse dolores ducimus.</p>
+            </div>
+            <div style="background-color: yellow; padding: 10px; font-weight: bold;">
+                <html>DIV 1 COM COR AMARELA</html>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laboriosam recusandae sint hic quas in, minima maxime sunt ut magni dolorum, dolore mollitia praesentium. Maiores odit perferendis esse dolores ducimus.</p>
+            </div>
+            <div style="background-color: green; padding: 10px; font-weight: bold;">
+                <html>DIV 1 COM COR VERDE</html>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laboriosam recusandae sint hic quas in, minima maxime sunt ut magni dolorum, dolore mollitia praesentium. Maiores odit perferendis esse dolores ducimus.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

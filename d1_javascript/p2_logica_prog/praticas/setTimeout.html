@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="run">RUN</button>
+    <pre>previus this actual delay</pre>
+    <div class="log"></div>
+
+    <script>
+        
+        let last = 0;
+        let iterations = 10;
+
+        function timeOut(){
+
+            logline(new Date().getMilliseconds());
+
+            if(iterations-- > 0){ setTimeout(timeOut, 0) };
+
+        }
+
+        
+        function run(){
+
+            const log = document.querySelector("#log");
+            while(log.lastElementChild) {
+
+                log.removeChild(log.lastElementChild);
+
+            }
+
+            iterations = 10;
+            last = new Date().getMilliseconds();
+
+            setTimeout(timeOut, 0);
+
+        }
+
+        function logline(){
+
+            const newline = document.createElement("pre");
+            newline.textContent = `${pad(last)}  ${pad(now)}  ${now - last}`;
+            document.getElementById("log").appendChild(newline);
+            last = now;
+
+        }
+
+
+        document.querySelector("#run").addEventListener("click", run);
+
+    </script>
+</body>
+</html>

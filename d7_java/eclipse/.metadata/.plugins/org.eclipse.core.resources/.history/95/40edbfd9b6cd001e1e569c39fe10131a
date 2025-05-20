@@ -1,0 +1,125 @@
+//import java.util.Arrays;
+import java.util.Scanner;
+
+public class praticando {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int month;
+		
+		System.out.println("Digite um valor de 1 a 12: ");
+		month = sc.nextInt();
+		
+		System.out.println(quarterOf(month));
+		
+		sc.close();
+	}
+	
+/*
+Dado um mês como um número inteiro de 1 a 12, retorne a qual trimestre do ano ele pertence 
+como um número inteiro.
+
+Por exemplo: o mês 2 (fevereiro), faz parte do primeiro trimestre; o mês 6 (junho), 
+faz parte do segundo trimestre; e o mês 11 (novembro), faz parte do quarto trimestre.
+
+Limitação:
+
+1 <= mês <= 12
+*/
+	
+	public static int quarterOf(int month) {
+		String monthName = "";
+		int quarter = 0;
+		
+		switch(month) {
+			case 1:
+				monthName = "Janeiro";
+				break;
+			case 2:
+				monthName = "Fevereiro";
+				break;
+			case 3:
+				monthName = "Março";
+				break;
+			case 4:
+				monthName = "Abril";
+				break;
+			case 5:
+				monthName = "Maio";
+				break;
+			case 6:
+				monthName = "Junho";
+				break;
+			case 7:
+				monthName = "Julho";
+				break;
+			case 8:
+				monthName = "Agosto";
+				break;
+			case 9:
+				monthName = "Setembro";
+				break;
+			case 10:
+				monthName = "Outubro";
+				break;
+			case 11:
+				monthName = "Novembro";
+				break;
+			case 12:
+				monthName = "Dezembro";
+				break;
+			default:
+				System.out.println("Valor inválido");
+		}
+		
+		if(monthName == "Janeiro" || monthName == "Fevereiro" || monthName == "Março" || monthName == "Abril") {
+			quarter = 1;
+			System.out.println("Mês: " + monthName);
+			System.out.println("Trimestre: " + quarter + "º");
+		} else {
+			System.out.println("Valor inválido");
+		}
+		
+		return quarter;
+	}
+	
+	public static int otherAngle(int angle1, int angle2) {
+		int angle3;
+		
+		angle3 = 180 -(angle1 + angle2);
+		
+		return angle3;
+	}
+	
+	
+//	### COMPARANDO PARÂMETROS DE UMA FUNÇÃO ###
+	static String greet(String name, String ownser) {
+		if (name == ownser) {
+			return "Olá chefe";
+		} else {
+			return "Olá convidado";
+		}
+	}
+	
+//	### TROCANDO OS VALORES DE UMA STRING POR 1 SE MAIOR QUE 5, E POR 0 SE MENOR QUE 5 ###
+	public static String fakeBin(String numberString) {
+//		repartindo string
+		String[] arr = numberString.split("");
+		String aux = "";
+		
+//		percorrendo o array
+
+
+for (int i = 0; i < arr.length; i++) {
+			if(Integer.parseInt(arr[i]) < 5) {
+				arr[i] = "0";
+			} else if (Integer.parseInt(arr[i]) >= 5) arr[i] = "1";
+			
+			aux += arr[i];
+		}
+		
+		return aux;
+	}
+
+}

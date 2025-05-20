@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>função construtora</title>
+</head>
+<body>
+    
+    <script>
+
+        function Pessoa(nome, sobrenome, idade){
+
+            console.log(this);
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+            this.idade = idade;
+
+        }
+
+        function Pessoa1(aluno){
+
+            this.aluno = aluno;
+
+            return { nome: "alexa" }
+
+        }
+
+
+        let pessoa = new Pessoa('Diogo', 'Mello', 20);
+        let aluno = new Pessoa1('Diogo');
+
+        console.log(pessoa);
+        console.log(aluno);
+
+    </script>
+
+</body>
+</html>

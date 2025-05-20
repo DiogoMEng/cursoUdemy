@@ -1,0 +1,6 @@
+nome: Maria, idade: 45
+nome: João, idade: 33
+nome: Tatiana, idade: 43
+nome: Cristian, idade: 45
+nome: Diogo, idade: 19
+nome: Carol, idade: 25

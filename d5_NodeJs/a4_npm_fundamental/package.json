@@ -1,0 +1,18 @@
+{
+  "name": "npm_fundamentos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "a1_criacao_projeto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node a1_criacao_projeto.js"
+  },
+  "author": "Diogo (http://diogomello-dev.netlify.app)",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2"
+  }
+}

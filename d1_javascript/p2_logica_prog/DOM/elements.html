@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // *** ELEMENT.ATTRIBUTES ***
+        // let input = document.getElementsByTagName("div")[0];
+        // let attr = input.attributes;
+
+        // alert(attr);
+
+
+        // *** ELEMENT.CHILDREN ***
+        // const elemento = document.getElementById("bloco-teste");
+        // for (const child of elemento.children){
+        //     console.log(child.tagName);
+        // }
+
+
+        // *** ELEMENT.CLASSLIST ***
+        // const div = document.getElementsByTagName("div")[0];
+        // div.classList.remove("teste");
+        // div.classList.add("teste3");
+        // div.classList.toggle("done");
+
+
+        // *** ELEMENT.CLASSNAME ***
+        // const div = document.querySelector(".teste");
+
+        // div.className = "teste4";
+
+        // console.log(div.className);
+
+
+        // *** ELEMENT.ID ***
+        // const div = document.querySelector("div");
+        // console.log(div.id);
+
+
+        // *** ELEMENT.INNERHTML ***
+        // const contentEst = document.getElementsByClassName("content-test")[0];
+
+        // contentEst.innerHTML += "<form><li>5</li></form>";
+
+
+        // *** ELEMENT.FIRSTELEMENTCHILD
+        // const contentEst = document.getElementsByClassName("content-test")[0];
+
+        // console.log(contentEst.firstElementChild);
+
+
+        // *** ELEMENT.LASTELEMENTCHILD ***
+        // const contentEst = document.getElementsByClassName("content-test")[0];
+
+        // console.log(contentEst.lastElementChild);
+
+
+        // *** ELEMENT.OUTERHTML ***
+        // const contentEst = document.getElementsByClassName
+        // ("content-test")[0];
+        // console.log(contentEst.outerHTML);
+
+        // const form = document.querySelector(".form-test2");
+        // console.log(form);
+
+        // form.outerHTML += '<li class="li-test">Valéria</li>'
+
+
+        // *** ELEMENTO.TAGNAME ***
+        // const div = document.getElementById("content-test-id");
+        // console.log(div.tagName);
+
+
+        //  *** ELEMENT.ADDEVENTLISTENER() ***
+        // function modiFyText(){
+
+        //     let t2 = document.getElementById("t2");
+
+        //     t2.firstChild.nodeValue = "three";
+
+        // }
+
+
+        // function load(){
+
+        //     let el = document.getElementById("t");
+        //     el.addEventListener("click", modiFyText, false);
+
+        // }
+
+
+        // document.addEventListener("DOMContentLoaded", load, false);
+
+        // let algo = function(el){
+
+        //     this.nome = "algo bom";
+        //     this.handleEvent = function(e){
+
+        //         console.log(this.nome)
+
+        //         switch(e.type){
+
+        //             case 'click':
+        //                 console.log('click');
+        //                 break
+        //             case 'dblclick':
+        //                 console.log('dblclick');
+        //                 break;
+
+        //         }
+
+        //     };
+
+        //     el.addEventListener('click', this, false);
+        //     el.addEventListener('dblclick', this, false);
+
+        // }
+
+    </script>
+
+</head>
+<body style="padding: 0; margin: 0;">
+
+    <div style="width: 100%; height: 400px;">
+        <div class="div-1" style="background: red; width: 100%; height: 25%;">DIV FILHA 1</div>
+        <div class="div-2" style="background: blue; width: 100%; height: 25%;">DIV FILHA 2</div>
+        <div class="div-3" style="background: green; width: 100%; height: 25%;">DIV FILHA 3</div>
+        <div class="div-4" style="background: yellow; width: 100%; height: 25%;">DIV FILHA 4</div>
+    </div>
+
+    <script>
+
+        // *** ELEMENT.GETATTRIBUTE ***
+        // let div = document.getElementsByClassName('div-test')[0];
+        // let align = div.getAttribute("align");
+        // let id = div.getAttribute("id");
+
+        // alert(id);
+
+
+        // *** ELEMENT.GETELEMENTSBYCLASSNAME() ***
+        // let div = document.getElementsByClassName('div-test')[0];
+        // let divEl = div.getElementsByClassName('table-test')[0];
+        // console.log(divEl);
+
+
+        // *** ELEMENT.REMOVE ***
+        // let div = document.getElementsByClassName('div-test')[0];
+        // let div_td = div.getElementsByTagName('td')[1];
+        // div_td.remove();
+
+
+        // *** ELEMENT.REMOVEATTRIBUTE ***
+        // let div = document.getElementsByTagName('div')[0];
+        // console.log(div);
+        // div.removeAttribute('id');
+        // console.log(div);
+
+
+        // *** EVENTTARGET.REMOVEEVENTLISTENER ***
+        // let div = document.getElementsByTagName('div')[0];
+        // let listener = function(evente){
+
+        //     const div = document.createElement('div');
+        //     const body = document.body
+        //     body.appendChild(div);
+
+        // };
+
+        // div.addEventListener('click', listener, false);
+
+        // setTimeout(() => {
+
+        //     div.removeEventListener('click', listener, false);
+            
+        // }, 10000)
+
+
+        // *** ELEMENT.SETATTRIBUTE ***
+        let div2 = document.getElementsByClassName('div-2')[0];
+        console.log(div2);
+        div2.addEventListener('click', e =>{
+
+            div2.setAttribute("style", "background: pink;")
+
+        });
+
+    </script>
+
+</body>
+</html>

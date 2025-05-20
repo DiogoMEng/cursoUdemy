@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+    
+</head>
+<body style="padding: 0; margin: 0;">
+    
+    <div class="content" style="margin: 0 auto; background-color: red; width: 100px; height: 250px; margin-top: 60px;">
+        <ul class="ul1">
+            <li class="li1">teste 1</li>
+            <li class="li2">teste 2</li>
+            <li class="li3">teste 3</li>
+            <li class="li4">teste 4</li>
+            <li class="li5">teste 5</li>
+            <li class="li6">teste 6</li>
+        </ul>
+        <ul class="ul2">
+            <li class="li7">teste 7</li>
+            <li class="li8">teste 8</li>
+            <li class="li9">teste 9</li>
+            <li class="li10">teste 10</li>
+            <li class="li11">teste 11</li>
+            <li class="li12">teste 12</li>
+        </ul>
+    </div>
+
+    <script>
+
+        // *** NODE.CHILDNODES ***
+        // const filhos = content.childNodes;
+        // console.log(filhos);
+
+
+        // *** NODE.NODENAME ***
+        // const div = document.querySelector('.content');
+        // const nomeNode = div.nodeName;
+        // console.log(nomeNode);
+
+
+        // *** NODE.NODETYPE ***
+        // const div = document.querySelector('.content');
+        // console.log(div.nodeType);
+
+
+        // *** NODE.NODEVALUE ***
+        // let div = document.querySelector('div').lastChild;
+        // div.nodeValue += "<p>fazendo teste</p>";
+
+
+        // *** NODE.PARENTNODE ***
+        // let li = document.querySelector('.li1');
+        // console.log(li);
+        // const parentLi = li.parentNode;
+        // console.log(parentLi);
+
+
+        // *** NODE.TEXTCONTENT ***
+        // let li = document.querySelector('.li1');
+        // const texto = li.textContent;
+        // console.log(texto);
+        // li.textContent = "mudança de texto";
+        // const texto2 = li.textContent;
+        // console.log(texto2);
+
+
+        // *** NODE.APPENDCHILD ***
+        // const li = document.createElement('li');
+        // const ul2 = document.querySelector('.ul2');
+        // li.setAttribute('class', 'class:"li13"');
+        // li.textContent = 'teste 13';
+        // ul2.appendChild(li);
+
+
+        // *** NODE.CLONENODE ***
+        // const ul = document.querySelector('.ul1');
+        // const ulclone = ul.cloneNode(true);
+        // let body = document.body;
+        // body.appendChild(ulclone);
+
+
+        // *** NODE.CONTAINS ***
+        // const ul = document.querySelector('.ul1');
+        // const body = document.body;
+        // console.log(body.contains(ul));
+
+
+        // *** NODE.INSERTBEFORE ***
+        // const ulPai = document.querySelector('.ul1');
+        // const liMove = document.querySelector('.li6');
+        // const liRefe = document.querySelector('.li4');
+
+        // ulPai.insertBefore(liMove, liRefe);
+
+
+        // *** NODE.REMOVECHILD ***
+        // const div = document.querySelector('.content');
+        // console.log(div);
+        // const ul = document.getElementsByClassName('ul1')[0];
+        // div.removeChild(ul);
+
+
+        // *** NODE.REPLACECHILD ***
+        const linew = document.createElement('li');
+        linew.textContent = 'teste de um teste';
+        const ul = document.querySelector('.ul2');
+        const liExisting = document.querySelector('.li9');
+
+        ul.replaceChild(linew, liExisting);
+
+
+    </script>
+
+</body>
+</html>

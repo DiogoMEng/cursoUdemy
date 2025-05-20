@@ -1,0 +1,112 @@
+//import java.util.Arrays;
+import java.util.Scanner;
+
+public class praticando {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int month;
+		
+		System.out.println("Digite um valor de 1 a 12: ");
+		month = sc.nextInt();
+		
+		System.out.println(quarterOf(month));
+		
+		sc.close();
+	}
+	
+/*
+Dado um mês como um número inteiro de 1 a 12, retorne a qual trimestre do ano ele pertence 
+como um número inteiro.
+
+Por exemplo: o mês 2 (fevereiro), faz parte do primeiro trimestre; o mês 6 (junho), 
+faz parte do segundo trimestre; e o mês 11 (novembro), faz parte do quarto trimestre.
+
+Limitação:
+
+1 <= mês <= 12
+*/
+	
+	public static int quarterOf(int month) {
+		switch(month) {
+		case 1:
+			System.out.println("Janeiro");
+			break;
+		case 2:
+			System.out.println("Fevereiro");
+			break;
+		case 3:
+			System.out.println("Março");
+			break;
+		case 4:
+			System.out.println("Abril");
+			break;
+		case 5:
+			System.out.println("Maio");
+			break;
+		case 6:
+			System.out.println("Junho");
+			break;
+		case 7:
+			System.out.println("Julho");
+			break;
+		case 8:
+			System.out.println("Agosto");
+			break;
+		case 9:
+			System.out.println("Setembro");
+			break;
+		case 10:
+			System.out.println("Outubro");
+			break;
+		case 11:
+			System.out.println("Novembro");
+			break;
+		case 12:
+			System.out.println("Dezembro");
+			break;
+		default:
+			System.out.println("Valor inválido");
+		}
+	}
+	
+	public static int otherAngle(int angle1, int angle2) {
+		int angle3;
+		
+		angle3 = 180 -(angle1 + angle2);
+		
+		return angle3;
+	}
+	
+	
+//	### COMPARANDO PARÂMETROS DE UMA FUNÇÃO ###
+	static String greet(String name, String ownser) {
+		if (name == ownser) {
+			return "Olá chefe";
+		} else {
+			return "Olá convidado";
+		}
+	}
+	
+//	### TROCANDO OS VALORES DE UMA STRING POR 1 SE MAIOR QUE 5, E POR 0 SE MENOR QUE 5 ###
+	public static String fakeBin(String numberString) {
+//		repartindo string
+		String[] arr = numberString.split("");
+		String aux = "";
+		
+//		percorrendo o array
+
+
+for (int i = 0; i < arr.length; i++) {
+			if(Integer.parseInt(arr[i]) < 5) {
+				arr[i] = "0";
+			} else if (Integer.parseInt(arr[i]) >= 5) arr[i] = "1";
+			
+			aux += arr[i];
+		}
+		
+		return aux;
+	}
+
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;;AAAAA,KAAK,CAAC,UAAD,CAAL,C","sources":["webpack://p2WebPack/./src/index.js"],"sourcesContent":["alert('mensagem');"],"names":["alert"],"sourceRoot":""}

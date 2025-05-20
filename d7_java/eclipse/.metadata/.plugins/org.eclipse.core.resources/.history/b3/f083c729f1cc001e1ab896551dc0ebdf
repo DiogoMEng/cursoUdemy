@@ -1,0 +1,34 @@
+import java.util.Arrays;
+
+public class praticando {
+
+	public static void main(String[] args) {
+		System.out.println(Arrays.toString(fakeBin("06001110011010101161101789")));
+	}
+	
+	
+//	### COMPARANDO PARÂMETROS DE UMA FUNÇÃO ###
+//	static String greet(String name, String ownser) {
+//		if (name == ownser) {
+//			return "Olá chefe";
+//		} else {
+//			return "Olá convidado";
+//		}
+//	}
+	
+//	### TROCANDO OS VALORES DE UMA STRING POR 1 SE MAIOR QUE 5, E POR 0 SE MENOR QUE 5 ###
+	public static String[] fakeBin(String numberString) {
+//		repartindo string
+		String[] arr = numberString.split("");
+		
+//		percorrendo o array
+		for (int i = 0; i < arr.length; i++) {
+			if(Integer.parseInt(arr[i]) < 5) {
+				arr[i] = "0";
+			} else if (Integer.parseInt(arr[i]) >= 5) arr[i] = "1";
+		}
+		
+		return arr;
+	}
+
+}

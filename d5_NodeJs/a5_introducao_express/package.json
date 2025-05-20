@@ -1,0 +1,19 @@
+{
+  "name": "a5_introducao_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "a1_intro_express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./exercicio.js localhost 5000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

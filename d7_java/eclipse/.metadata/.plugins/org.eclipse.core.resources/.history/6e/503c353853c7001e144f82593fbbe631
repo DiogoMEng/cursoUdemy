@@ -1,0 +1,8 @@
+# DEBUG
+
+breakPoint - informa até onde deve seguir o debug.
+- teclas de atalho "ctrl + shift + b".
+
+Passos para iniciar a execução com passo a passo:
+1. botão direito na classe > debug as.
+2. java application.

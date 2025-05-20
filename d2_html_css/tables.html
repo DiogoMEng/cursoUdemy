@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            color: #fdfdfd;
+        }
+
+        /* tr:nth-child(even){
+            background-color: #3900f6;
+        }
+
+        tr:nth-child(odd){
+            background-color: #9174ee;
+        } */
+
+        /* td:nth-child(even){
+            background-color: #180067;
+        } */
+
+        
+        td, th{
+            /* border-radius: 20px; */
+            border-style: dotted;
+            border-color: #f1fd01; /* define a cor da bordar */
+        }
+        
+        /* table, td, th{
+            border: 1px solid;
+            border-collapse: collapse;
+            background-color: #9174ee;
+        }
+
+        table:hover, tr:hover, td:hover{
+            background-color: #3c09e5;
+        } */
+
+    </style>
+</head>
+<body>
+    <table style="width: 100%; border-spacing: 10px;">
+        <caption style="color: #000;">Legenda da tabela</caption>
+        <tr>
+            <th style="width: 25%;" colspan="2" rowspan="2">Company</th> <!-- células de cabeçalho (negrito e centralizado) -->
+            <th style="width: 65%;">Country</th>
+        </tr>
+        <tr style="height: 100px;"> <!-- representa cada linha da tabela -->
+            <td>Alfreds Futterkiste</td> <!-- define uma célula da tabela -->
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+    </table>
+    <table style="margin-top: 20px; width: 50%;">
+        <tr>
+            <!-- Um th para linha da tabela -->
+            <th style="width: 15%;">firstname</th>
+            <td>Fill</td>
+            <td>Eve</td>
+        </tr>
+        <tr>
+            <th style="width: 15%;">lastname</th>
+            <td>Smith</td>
+            <td>Jackson</td>
+        </tr>
+        <tr>
+            <th style="width: 15%;">age</th>
+            <td>94</td>
+            <td>50</td>
+        </tr>
+    </table>
+    <table style="margin-top: 20px;">
+        <colgroup>
+            <col span="1" style="background-color: #1f037a;">
+        </colgroup>
+        <tr>
+            <th>Company</th> <!-- células de cabeçalho (negrito e centralizado) -->
+            <th>Country</th>
+        </tr>
+        <tr> <!-- representa cada linha da tabela -->
+            <td>Alfreds Futterkiste</td> <!-- define uma célula da tabela -->
+            <td>Maria Anders</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+        </tr>
+    </table>
+</body>
+</html>

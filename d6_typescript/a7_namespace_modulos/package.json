@@ -1,0 +1,31 @@
+{
+  "name": "intro",
+  "version": "1.0.0",
+  "description": "Ultima aula: https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/learn/lecture/20469061#overview.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:frontend": "webpack -w",
+    "build:backend": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "lodash": "^4.17.21",
+    "node": "^21.2.0",
+    "prettier": "^3.0.3",
+    "ts-loader": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

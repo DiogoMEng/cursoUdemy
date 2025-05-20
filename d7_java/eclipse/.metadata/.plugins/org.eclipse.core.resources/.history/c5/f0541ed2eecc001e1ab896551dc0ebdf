@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+public class praticando {
+
+	public static void main(String[] args) {
+		System.out.println();
+		fakeBin("01001110011010101101101001");
+	}
+	
+	
+//	### COMPARANDO PARÂMETROS DE UMA FUNÇÃO ###
+//	static String greet(String name, String ownser) {
+//		if (name == ownser) {
+//			return "Olá chefe";
+//		} else {
+//			return "Olá convidado";
+//		}
+//	}
+	
+	public static void fakeBin(String numberString) {
+//		repartindo string
+		String[] arr = numberString.split("");
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+	}
+
+}

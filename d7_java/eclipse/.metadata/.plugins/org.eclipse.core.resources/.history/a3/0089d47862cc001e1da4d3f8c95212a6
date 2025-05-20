@@ -1,0 +1,8 @@
+# OPERADORES BITWISE
+
+Realização operações lógicas bit-a-bit em valores.
+
+Operadores:
+1. & - "E" bit-a-bit.
+2. | - "OU" bit-a-bit.
+3. ^ - "OU-Exclusivo" bit-a-bit.
