@@ -52,11 +52,15 @@ Conceitos de Deploy:
 
 **AWS Free Tier** - permite o uso base da computação em nuvem sem pagar nada.
 
-**Etapas para verificar se conta está ativa**:
+| **Etapas para verificar se conta está ativa** |
+|-----------------------------------------------|
+
 1. pesquisar por **EC2**.
 2. Na próxima janela se os detalhes estiverem zerados é porque a conta está ativa.
 
-**Etapas para criação de autenticação MFA para usuário root**:
+| **Etapas para criação de autenticação MFA para usuário root** |
+|---------------------------------------------------------------|
+
 1. Pesquisar por **IAM**.
 2. Na próxima janela clique para adicionar autenticação MFA para usuário root.
 3. Depois atribua a autenticação em **Assign MFA**.
@@ -67,7 +71,9 @@ Conceitos de Deploy:
 5. Escanei o código e insira os 6 dígitos.
 6. adicione o serviço.
 
-**Etapas para criação de user IAM**:
+| **Etapas para criação de user IAM** |
+|-------------------------------------|
+
 1. Pesquisar por **IAM**.
 2. Buscar por **users**.
 3. Clique em `add users`.
@@ -86,13 +92,17 @@ Conceitos de Deploy:
 13. Clique para voltar para lista de usuários.
 14. Adicionar a autenticação MFA para este usuário em **security credentials**.
 
-**Definindo valores de faturamento**:
+| **Definindo valores de faturamento** |
+|--------------------------------------|
+
 1. Busca a painel de faturamento no **menu suspenso**.
 2. Acesse preferências de cobrança, clique em **preferência de entrega de fatura** e marque a caixa.
 3. Depois acesse preferências de alertas, marque a caixa para receber alertas de níveis gratuitos e insira seu email.
 4. Marque a caixa para receber **alertas de faturamento do CloudWatch**.
 
-**Etapas para configuração do serviço CloudWatch**:
+| **Etapas para configuração do serviço CloudWatch** |
+|----------------------------------------------------|
+
 1. Busque por cloudwatch > no menu superior encontre a localidade e selecione: **US East (N. Virginia)**.
   - A região representa a localidade de um datacenter.
 2. Siga para alarmes, clique em todos os alarmes > crie um novo alarme.
@@ -103,7 +113,9 @@ Conceitos de Deploy:
 7. Forneça um nome para o alarme (Ex: <AWSBillingAlert>) > siga para próximo.
 8. Faça a confirmação de e-mail.
 
-**Etapas para criação de Certificado de segurança**:
+| **Etapas para criação de Certificado de segurança** |
+|-----------------------------------------------------|
+
 1. Busque por certificate manager > selecione a mesma região da etapa anterior.
 2. Clique em **solicitar certificado** > depois selecione **solicitar certificado público**.
 3. Fornceça os seguintes dados:
