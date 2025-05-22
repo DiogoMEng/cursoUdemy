@@ -1652,20 +1652,15 @@ Funções que **observam** os demais objetos, **modificam** e **substituem** os 
 
 ```typescript
 // tipando o construtor de uma classe
-function decorator<T extends new (...args: any[]) => any>(target: T): T{
+function <T extends new (...args: any[]) => any>(target: T): T{
 ...
 }
-```
 
-- tudo que aparece depois de extends até o última any representa a tipagem de um construtor de uma classe.
+// tudo que aparece depois de extends até o última any representa a tipagem de um construtor de uma classe.
 
-Exemplo:
-
-```
-
-function decorator<T extends new (...args: any[]) => any>(target: T): T{
-return class extends target {
-cor: string;
+function <T extends new (...args: any[]) => any>(target: T): T{
+    return class extends target {
+        cor: string;
 
         constructor (...args: any[]) {
             super(...args)
@@ -1675,35 +1670,38 @@ cor: string;
 
 }
 
+// uma subclasse anônima é criada herdando os atributos de uma classe, e nela é instãnciado um construtor que permite modificar os atributos da classe herdade.
 ```
 
-- uma subclasse anônima é criada herdando os atributos de uma classe, e nela é instãnciado um construtor que permite modificar os atributos da classe herdade.
+`@name_function` - quando inserido em cima de uma classe, informa que está classe está passando por dentro da função modificadora da classe.
 
-@name_function - quando inserido em cima de uma classe, informa que está classe está passando por dentro da função modificadora da classe.
+```typescript
+@decorator("valor1", "valor2")
+class Animal {
 
-Exemplo:
-
-```
-
-@decorator
-export class Animal {
-constructor(public name: string, public color: string) {}
-}
-
-function decorator<T extends new (...args: any[]) => any>(target: T): T{
-return class extends target {
-color: string;
-
-        constructor (...args: any[]) {
-            super(...args)
-            this.color = 'Qualquer coisa';
-        }
-    }
+  constructor(
+    public name: string,
+    public color: string
+  ){}
 
 }
 
-const animal = new Animal('Luiz', 'roxo');
-console.log(animal)
+function decorator(param1: string, param2: string) {
+  return function <T extends new (...args: any[]) => any>(target: T): T {
+    return class extends target {
+      color: string;
+
+      constructor(...args: any[]) {
+        super(...args);
+        this.color = "qualquer coisa";
+      }
+    };
+  };
+}
+
+const animal = new Animal("Luiz", "Roxo");
+
+console.log(animal);
 
 ```
 
@@ -1711,24 +1709,23 @@ _Nota: Classes são convertidas para funções construtoras_.
 
 ## <p id="decorator-factories">Decorator Factories</p>
 
-Exemplo: recebendo parâmetros com decorator.
+<a href="./a6_decorators/src/decoratorFactory.ts">Visualizar Script</a>
 
-```
-
+```typescript
+// recebendo parâmetros com decorator
 @decorator('valor1', 'valor2')
 
 function decorator(param1: string, param2: string){
-return function <T extends new (...args: any[]) => any>(target: T): T {
-...
-}
+    return function <T extends new (...args: any[]) => any>(target: T): T {
+    ...
+    }
 }
 
+// @decorator: recebe os valores dos parãmetros.
+// dentro da função decorator tem uma função anônima que irá ser a modificadora da classe.
 ```
 
-- @decorator: recebe os valores dos parãmetros.
-- dentro da função decorator tem uma função anônima que irá ser a modificadora da classe.
-
-_Nota: Caso seja necessário criar outro decorator, basta acrescentar mais um @name_decorator em cima da classe_
+_Nota: Caso seja necessário criar outro decorator, basta acrescentar mais um @name\_decorator em cima da classe_
 
 ## <p id="method-decorator">Method Decorator</p>
 
