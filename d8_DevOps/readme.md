@@ -3,9 +3,12 @@
 # <p id="sumario">SUMÁRIO</p>
 
 Parte 1: <a href="#introducao">Introdução aos conceitos de DevOps</a>
+
 Parte 2: <a href="#pre-requisitos-configuracao">Pré-requisitos de configuração</a>
+
 Parte 3: <a href="#vm-Setup">VM Setup</a>
 - <a href="#criando-vm-manualmente">Criando VM Manualmente</a>
+- <a href="#criando-vm-automaticamente">Criando VM Automaticamente</a>
 
 ---
 
@@ -258,5 +261,31 @@ Após a conexão, faça um teste digitando os seguintes comandos na máquina fí
 
 > OBS: o mesmo processo devo ser realizado para se conectar na vm do Ubunto.
 - Ex: `ssh devops@192.168.1.4`.
+
+## <p id="criando-vm-automaticamente">Criando VM Automaticamente</p>
+
+**Vagrant** - ferramenta de automação de VMs ou gerenciamento de ciclo de vida da VM.
+- Utilize ferramentas hipervisor para criar e gerenciar máquinas virtuais.
+
+|      Benefícios     |                     Desrição                        |
+|---------------------|-----------------------------------------------------|
+| **Instalção do SO** | configura VMs usando imagens de VM, chamadas de BOX |
+| **Vagrantfile**     | permite fazer diversas configurações na VM          |
+| **Provisionamento** | armazena todas os comandos necessários para VM      |
+
+|     Comandos Básicos     |                                    |
+|--------------------------|------------------------------------|
+| **vagrant init boxname** | Menciona o nome da caixa           |
+| **vagrant up**           | Cria a VM se já estiver disponível |
+| **vagrant ssh**          | Login na VM                        |
+| **vagrant halt**         | Desliga a VM                       |
+| **vagrant destroy**      | Exclui a VM                        |
+
+![alt text](public/img/VMs/image1.png)
+
+| **Etapas - Criação Máquina Virtual com Vagrant** |
+|--------------------------------------------------|
+
+
 
 <a href="#sumario">retorna ao sumário</a>
