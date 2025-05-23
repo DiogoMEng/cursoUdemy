@@ -1,27 +1,68 @@
-@decorator("valor1", "valor2")
-class Animal {
+function propertyDecorator(classPrototype: any, name: string | symbol): any {
+
+  console.log(classPrototype);
+  console.log(name);
+
+  let propertyValue: any;
+
+  return {
+    get: () => propertyValue,
+    set: (value: any) => {
+      propertyValue = value;
+    }
+  }
+
+}
+
+
+function decorator(classPrototype: any, nameMethod: string, descriptor: PropertyDescriptor): any {
+
+  console.log(classPrototype);
+  console.log(nameMethod);
+  console.log(descriptor);
+
+  return {
+    value: function (...args: string[]) {
+      return 1
+    },
+  }
+
+}
+
+class OnePerson {
+  
+  @propertyDecorator
+  name: string;
+  surname: string;
+  age: number;
 
   constructor(
-    public name: string,
-    public color: string
-  ){}
+    name: string,
+    surname: string,
+    age: number
+  ) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+  }
+
+  @decorator
+  method(msg: string): string {
+    return `${this.name} ${this.surname}: ${msg}`
+  }
+
+  get completeName(): string {
+    return this.name + " " + this.surname;
+  }
+
+  set completeName(value: string) {
+    const words = value.split(/\s+/g);
+    const firstName = words.shift();
+
+    if(!firstName) return;
+
+    this.name = firstName;
+    this.surname = words.join(" ");
+  }
 
 }
-
-function decorator(param1: string, param2: string) {
-  return function <T extends new (...args: any[]) => any>(target: T): T {
-    return class extends target {
-      color: string;
-
-      constructor(...args: any[]) {
-        super(...args);
-        this.color = "qualquer coisa";
-        // Você pode usar param1 e param2 aqui se quiser
-      }
-    };
-  };
-}
-
-const animal = new Animal("Luiz", "Roxo");
-
-console.log(animal);

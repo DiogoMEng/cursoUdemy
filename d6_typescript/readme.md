@@ -1725,43 +1725,35 @@ function decorator(param1: string, param2: string){
 // dentro da função decorator tem uma função anônima que irá ser a modificadora da classe.
 ```
 
-_Nota: Caso seja necessário criar outro decorator, basta acrescentar mais um @name\_decorator em cima da classe_
+_Nota: Caso seja necessário criar outro decorator, basta acrescentar mais um `@name_decorator` em cima da classe_
 
 ## <p id="method-decorator">Method Decorator</p>
 
-_OBS: em decoradores de métodos deve-se receber o prototype da classe que nada mais é que um objeto, o nome do método, um descriptor._
+> OBS: em decoradores de métodos deve-se receber o prototype da classe que nada mais é que um objeto, o nome do método, um descriptor.
 
-Exemplo:
-
-```
-
+```typescript
 function decorator(classPrototype: any, nameMethod: string, descriptor: PropertyDescriptor): any{
 ...
 }
-
 ```
 
-_OBS: Se algo for criado dentro do decorador de classe o typescript pode não reconhecer essa modificação que for criada._
+> OBS: Se algo for criado dentro do decorador de classe o typescript pode não reconhecer essa modificação que for criada.
 
-Exemplo:
-
-```
-
+```typescript
 function decorator(classPrototype: any, nameMethod: string, descriptor: PropertyDescriptor): any{
-return {
-writable: false,
-enumerable: false,
-...
+    return {
+        writable: false,
+        enumerable: false,
+        ...
+    }
 }
-}
-
 ```
 
 O tipo de retorno de funções decoradoras de métodos devem ser any, void ou PropertyDescriptor.
 
 ## <p id="parameters-decorator">Parameters Decorator</p>
 
-Usado apenas assistir o que tem dentro de um parâmetro.
+Usado apenas para assistir o que tem dentro de um parâmetro.
 
 Diferente dos decoradores de método, este não recebe o index como parâmetro no lugar de descriptor.
 
@@ -1771,21 +1763,16 @@ Diferente dos decoradores de método, este não recebe o index como parâmetro n
 
 ## <p id="property-decorator">Property Decorator</p>
 
-Exemplo:
-
-```
-
+```typescript
+// inserido antes de uma propriedade.
 function propertyDecorator(classPrototype: any, name: string | symbol): any {
 ...
 }
-
 ```
-
-- inserido antes de uma propriedade.
 
 <a href="#sumario" style="color: red; font-weight: bold; font-size: 15px;">Sumário</a>
 
-<br /><br /><br />
+---
 
 # <p id="namespace-modules">NAMESPACE MODULES</p>
 
@@ -1799,14 +1786,15 @@ Para liberar imports do javascript dentro do typescript deve-se acrescentar no a
 
 ## <p id="utilizando-bibliotecas-de-terceiros">Utilizando Bibliotecas de Terceiros</p>
 
-Etapas para instalar uma biblioteca:
+| **Etapas para instalar uma biblioteca** |
+|-----------------------------------------|
 
-1. no terminal, digite: npm i biblioteca @types/biblioteca.
-   - @types/ deve ser utilizado para qualquer biblioteca que for instalada dentro do projeto.
+1. no terminal, digite: `npm i biblioteca @types/biblioteca`.
+   - `@types/` deve ser utilizado para qualquer biblioteca que for instalada dentro do projeto.
 
 ## <p id="estendeno-tipos-de-bibliotecas">Estendeno Tipos de Bibliotecas</p>
 
-Declaration files representado pela extensão "arquivo.d.ts".
+**Declaration files** são representados pela extensão "arquivo.d.ts".
 
 - tudo que for criado dentro deste arquivo precisa ser de maneira global.
 
@@ -1816,19 +1804,19 @@ _Nota: clicando sobre o import do lodash é possível entrar no arquivo de decla
 
 <a href="#sumario" style="color: red; font-weight: bold; font-size: 15px;">Sumário</a>
 
-<br /><br /><br />
+---
 
 # <p id="principio-solid">PRINCÍPIOS S.O.L.I.D</p>
 
 Princípios de programação que ajudam a manter o código limpo, flexível e fácil de ser mantido.
 
-Significado no nome:
-
-- S: single responsibility principle - uma classe deve ter apenas um motivo para mudar.
-- O: open/closed principle - modulos, classes, objetos e operações devem estar abertos para extensões, mas fechados para modificações.
-- L: liskov substitution principle - Subtipos precisam ser substituiveis por seus tipos base.
-- I: interface segregation principle - os clientes não devem ser forçados a depender de interfaces que não utilizem.
-- D: dependecy inversion principle - módulos de alto nível não devem ser dependentes de módulos de baixo nível; ambos devem depender de abstrações.
+| | |
+|-|-|
+| **S: single responsibility principle** | uma classe deve ter apenas um motivo para mudar |
+| **O: open/closed principle** | modulos, classes, objetos e operações devem estar abertos para extensões, mas fechados para modificações |
+| **L: liskov substitution principle** | Subtipos precisam ser substituiveis por seus tipos base |
+| **I: interface segregation principle** | os clientes não devem ser forçados a depender de interfaces que não utilizem |
+| **D: dependecy inversion principle** | módulos de alto nível não devem ser dependentes de módulos de baixo nível; ambos devem depender de abstrações |
 
 _Nota: npx npm-check -u: usado para realizar a atualização de pacotes._
 
