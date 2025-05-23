@@ -286,6 +286,12 @@ Após a conexão, faça um teste digitando os seguintes comandos na máquina fí
 | **Etapas - Criação Máquina Virtual com Vagrant** |
 |--------------------------------------------------|
 
+1. No terminal, digite: `mkdir /vagrant-vms` --> `cd /vagrant-vms/`.
+2. Dentro da pasta **vagrant-vms**, crie: `mkdir centos`, `mkdir ubunto`.
+3. Busque no navegador, **Vagrant Cloud** e procure pela caixa **centos 9**. Depois selecione: `eurolinux-vagrant/centos-stream-9`.
+4. Entra na pasta: `cd centos`, e digite o comando: vagrant init <nome_caixa> (Ex: eurolinux-vagrant/centos-stream-9).
+5. Verifique o arquivo Vagrantfile gerado com: `cat Vagrantfile` --> Em seguida, digite: `vagrant up`.
 
+_Nota: utilize `pdw` para verificar o diretório atual ou `ls` para verificar as pastas e arquivos existentes no diretório._
 
 <a href="#sumario">retorna ao sumário</a>
