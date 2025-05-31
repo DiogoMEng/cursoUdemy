@@ -1,9 +1,0 @@
-INDEX VERSION 1.134+C:\filesDiogo\linguagens\java\eclipse\.metadata\.plugins\org.eclipse.jdt.core
-1073376101.index
-2432902877.index
-549343220.index
-3035699489.index
-1323314924.index
-2057366137.index
-57225068.index
-1865797976.index
