@@ -88,6 +88,12 @@ Parte 9: <a href="#arquitetura-mvc" style="font-weight: bold">Arquitetura MVC</a
 2. <a href="#controller">Camada de Controle - Controller</a>
 3. <a href="#view">Camada de Visualização - View</a>
 
+Parte 10: <a href="#mongodb" style="font-weight: bold">Node.js com MongoDB</a>
+
+1. <a href="#nosql">O que é NoSQL</a>
+2. <a href="#mongodb">O que é MongoDB</a>
+3. <a href="#principais-entidades">Principais Entidades</a>
+
 <br /><br /><br />
 
 # <p id="introducao">INTRODUÇÃO</p>
@@ -988,5 +994,68 @@ Representa o frontend da aplicação, onde normalmente os dados serão apresenta
 Os controllers servem como meio de passagem dos dados que irão ser apresentados nas views.
 
 _OBS: lógica/regra de negócios não devem está presente dentro da views._
+
+<a href="#sumario" style="font-weight: bold">Sumário</a>
+
+---
+
+# <p id="mongodb">Node.js com MongoDB</p>
+
+## <p id="nosql">O que é NoSQL</p>
+
+|          **CARACTERISTICAS DE BASES NOSQL**           |
+|-------------------------------------------------------|
+| bancos de dados focados em documentos.                |
+| Composto por vários objetos javascript.               |
+| Liberdade de criação.                                 |
+| collections = tabelas.                                |
+| **Modelagem de dados** com relacionamento é opcional. |
+
+Neste tipo de base dados não se utilize queries, e sim métodos de classes para trabalhar com os dados.
+
+## <p id="mongodb">O que é MongoDB</p>
+
+|  **CARACTERISTICAS DO MONGODB** |
+|---------------------------------|
+| Orientado a documento           |
+| Estruturas parecidas com JSON   |
+| Índices primários e secundários |
+
+## <p id="principais-entidades">Principais Entidades</p>
+
+**Database** - local que armazena todas as collections e dados.
+
+**Collections** - funcionam como as tabelas dos bancos relacionais, onde inserimos os dados.
+
+**Documents** - representam os dados.
+
+> OBS: Collections podem ser criadas livremente a qualquer momento e não possuem colunas fixas para os dados.
+
+### MongoDB e JSON
+
+`BSON` - tipo de dado inserido na tabela (Variação de JSON).
+- Possui mais recursos que o JSON.
+
+```bash
+# Sintaxe
+{
+  nome: "Mateus",
+  idade: 30
+}
+```
+
+### Comandos Básicos
+
+```bash
+show dbs # retorna todos os bancos de dados
+
+use <namedb> # cria um novo banco de dados (Se não existir)
+```
+
+_Nota: o MongoDB se cria realmente um banco quando já há dados._
+
+```bash
+db.
+```
 
 <a href="#sumario" style="font-weight: bold">Sumário</a>

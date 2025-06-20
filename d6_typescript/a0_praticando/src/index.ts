@@ -1,8 +1,17 @@
+type RGBConvert = (R: number, G: number, B: number) => string;
 
-type RGB = { R: number, G: number, B: number }
+const clamp = (value: number): number => {
+  return Math.max(0, Math.min(255, Math.round(value)));
+};
 
-type RGBConvert = (rgb: RGB) => string;
+const rgb: RGBConvert = (R, G, B) => {
+  const r = clamp(R).toString(16).padStart(2, "0");
+  const g = clamp(G).toString(16).padStart(2, "0");
+  const b = clamp(B).toString(16).padStart(2, "0");
+  return (r + g + b).toUpperCase();
+};
 
-export function rgb: RGB(){
-  
-}
+console.log(rgb(255, 255, 255));
+console.log(rgb(255, 255, 300));
+console.log(rgb(0, 0, 0));      
+console.log(rgb(148, 0, 211));  
