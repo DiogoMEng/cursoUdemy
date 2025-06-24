@@ -1161,4 +1161,16 @@ _Nota: API é um acrônimo para interface de Programação de Aplicações._
 
 **REST** (Transferência Representacional de Estado) - estilo de arquitetura que define como as APIs devem ser criadas.
 
+**SPA** (Single Page Application) - Aplicação possui front-end separado do back-end.
+
+| **VERBOS HTTP** |                                  |
+|-----------------|----------------------------------|
+|     **GET**     | Recebe dados                     |
+|     **POST**    | Envio de Dados                   |
+|     **PUT**     | Atualização de Registro          |
+|     **PATCH**   | Atualização parcial de Registros |
+|     **DELETE**  | Deleta Dados                     |
+
+
+
 <a href="#sumario" style="font-weight: bold">Sumário</a>
