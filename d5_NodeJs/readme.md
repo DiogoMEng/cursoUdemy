@@ -93,8 +93,19 @@ Parte 10: <a href="#mongodb" style="font-weight: bold">Node.js com MongoDB</a>
 1. <a href="#nosql">O que é NoSQL</a>
 2. <a href="#mongodb">O que é MongoDB</a>
 3. <a href="#principais-entidades">Principais Entidades</a>
+4. <a href="#conectando-node-mongodb">Conectando o Node.js ao MongoDB</a>
+5. <a href="#salvando-dados-edicao">Salvando dados de edição</a>
 
-<br /><br /><br />
+Parte 11: <a href="#mongoose" style="font-weight: bold">Adaptando o Mongoose ao Projeto Node</a>
+
+1. <a href="#odm">ODM: Object Data Mapping</a>
+2. <a href="#resgate-dados-mongoose">Resgate de Dados com Mongoose</a>
+
+Parte 12: <a href="#api" style="font-weight: bold">Introdução a APIs</a>
+
+1. <a href="#conceito-api">Conceito de API</a>
+
+---
 
 # <p id="introducao">INTRODUÇÃO</p>
 
@@ -1055,7 +1066,99 @@ use <namedb> # cria um novo banco de dados (Se não existir)
 _Nota: o MongoDB se cria realmente um banco quando já há dados._
 
 ```bash
-db.
+# Cria uma collection e insere um dado
+db.nameCollection.insertOne({ nome: "Diogo", idade: 23  })
+
+# Busca o dado
+# --> retorna todos os dados se não critério for inserido
+db.nameCollection.findOne()
 ```
+
+## <p id="conectando-node-mongodb">Conectando o Node.js ao MongoDB</p>
+
+```bash
+# instalação de pendências de projeto
+npm install express express-handlebars mongodb nodemon
+```
+
+```javascript
+// Protocolo do MongoDB + ip do servidor
+const uri = "mongodb://localhost:27017"
+```
+
+## <p id="salvando-dados-edicao">Salvando dados de edição</p>
+
+```javascript
+await conn.db().collection("products").updateOne({ _id: new ObjectId(id) }, { $set: this });
+```
+
+**Operador `SET`** - operador de atualização do MongoDB que permite modificar campos específicos de um documento sem afetar outros campos existentes.
+- `$set` garante que apenas os campos presentes no objeto this sejam atualizados.
+
+> OBS: Sem o $set, se você passasse apenas this como segundo parâmetro, o MongoDB tentaria substituir completamente o documento.
+
+<a href="#sumario" style="font-weight: bold">Sumário</a>
+
+---
+
+# <p id="mongoose">Adaptando o Mongoose ao Projeto Node</p>
+
+## <p id="odm">ODM: Object Data Mapping</p>
+
+**ODM: Object Data Mapping** - realiza o mapeamento de dados por objetos.
+
+| **CARACTERÍSTICAS DO ODM** |                                                                     |
+|----------------------------|---------------------------------------------------------------------|
+| **Abstração**              | permite trabalhar com documentos do banco como se fossem objetos JS |
+| **Validação**              | validação de dados antes de salvamento no banco                     |
+| **Esquemas**               | Definição de estruturas para documentos                             |
+| **Métodos**                | Métodos para operação de CRUD                                       |
+
+**Mongoose** - biblioteca ODM mais popular para MongoDB em Node.js.
+- funciona como uma camada de abstração entre sua aplicação Node.js e o MongoDB.
+- Permite a criação de models para interação com a collection que ele corresponde.
+
+```javascript
+/**
+ *  REALIZAÇÃO CONEXÃO COM MONGOOSE 
+ */
+
+const mongoose = require("mongoose");
+
+async function main() {
+
+  await mongoose.connect("mongodb://localhost:27017/mongoosedb");
+  console.log("Conectou ao MongoDB com Mongoose");
+
+}
+
+// Promise Basic
+main().catch((err) => console.log(err));
+```
+
+## <p id="resgate-dados-mongoose">Resgate de Dados com Mongoose</p>
+
+`Método Find` - utilizado para o resgate de dados do Mongoose.
+- O **método lean** deve ser utilizado para formatar os dados, de modo que o handlebars possa utiliza-los.
+
+```javascript
+const products = await Product.find().lean();
+
+res.render("products/all", { products });
+```
+
+<a href="#sumario" style="font-weight: bold">Sumário</a>
+
+---
+
+# <p id="api">Introdução a APIs</p>
+
+## <p id="conceito-api">Conceito de API</p>
+
+_Nota: API é um acrônimo para interface de Programação de Aplicações._
+- Simples forma de comunicação entre aplicações.
+- baseada em requisições e respostas.
+
+**REST** (Transferência Representacional de Estado) - estilo de arquitetura que define como as APIs devem ser criadas.
 
 <a href="#sumario" style="font-weight: bold">Sumário</a>
